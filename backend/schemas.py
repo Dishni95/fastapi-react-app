@@ -1,4 +1,6 @@
 import datetime as _dt
+from matplotlib.pyplot import text
+from typing import Union, List
 
 import pydantic as _pydantic
 
@@ -38,6 +40,37 @@ class Lead(_LeadBase):
     owner_id: int
     date_created: _dt.datetime
     date_last_updated: _dt.datetime
+
+    class Config:
+        orm_mode = True
+
+
+class _PostBase(_pydantic.BaseModel):
+    post_name: str
+    post_body: str
+
+class PostCreate(_PostBase):
+    pass
+
+class Post(_PostBase):
+    id: int
+    owner_id: int
+
+    class Config:
+        orm_mode = True
+
+class _CommentBase(_pydantic.BaseModel):
+    comment_text: str
+
+class CommentCreate(_CommentBase):
+    pass
+
+class Comment(_CommentBase):
+    id: int
+    owner_id: int
+    post_id: Union[int, None] = None
+    parent_id: Union[int, None] = None
+    
 
     class Config:
         orm_mode = True

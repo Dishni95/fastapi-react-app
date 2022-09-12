@@ -9,6 +9,11 @@ import { UserContext } from "./context/UserContext";
 
 import Login from "./components/Login";
 import Table from "./components/Table";
+import PostsList from "./components/PostsList";
+
+
+/* import comments */ 
+import Comments from "./components/Comments";
 
 const App = () => {
   const [message, setMessage] = useState("");
@@ -39,7 +44,7 @@ const App = () => {
       <Header title={message}/>
       <div className="columns">
         <div className="column"></div>
-        <div className="column m-5 is-two-thirds">
+      {/*}  <div className="column m-5 is-two-thirds">
           {
             !token ? (
               <div className="columns">
@@ -47,6 +52,29 @@ const App = () => {
               </div>
             ): (
               <Table/>
+            )
+          }
+        </div> */}
+
+        <div className="column m-5 is-two-thirds">
+          {
+            !token ? (
+              <div className="columns">
+                <Register/> <Login/>
+              </div>
+            ): (
+              <PostsList/>
+            )
+          }
+        </div>
+        <div className="column m-5 is-two-thirds">
+          {
+            !token ? (
+              <div className="columns">
+                <Register/> <Login/>
+              </div>
+            ): (
+              <Comments/>
             )
           }
         </div>

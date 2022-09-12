@@ -1,0 +1,72 @@
+Date : 2022-09-11 02:45:17
+Directory : /Users/karim/Desktop/fastapi-react
+Total : 33 files,  30258 codes, 152 comments, 411 blanks, all 30821 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          3 |     28,803 |          0 |          4 |     28,807 |
+| JavaScript React |         11 |        651 |         12 |         79 |        742 |
+| Python           |         14 |        575 |        117 |        242 |        934 |
+| Ini              |          1 |         83 |          0 |         23 |        106 |
+| CSS              |          1 |         78 |          0 |         19 |         97 |
+| Markdown         |          1 |         38 |          0 |         33 |         71 |
+| HTML             |          1 |         18 |         23 |          2 |         43 |
+| JavaScript       |          1 |         12 |          0 |          9 |         21 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                        |         33 |     30,258 |        152 |        411 |     30,821 |
+| backend                                                                                  |         15 |        658 |        117 |        265 |      1,040 |
+| backend/alembic                                                                          |          8 |        178 |        113 |         65 |        356 |
+| backend/alembic/versions                                                                 |          7 |        143 |         84 |         49 |        276 |
+| frontend                                                                                 |         18 |     29,600 |         35 |        146 |     29,781 |
+| frontend/public                                                                          |          2 |         26 |         23 |          4 |         53 |
+| frontend/src                                                                             |         13 |        741 |         12 |        107 |        860 |
+| frontend/src/components                                                                  |          9 |        570 |          0 |         64 |        634 |
+| frontend/src/context                                                                     |          1 |         28 |          0 |          5 |         33 |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                 | language         | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /Users/karim/Desktop/fastapi-react/backend/__init__.py                                   | Python           |          0 |          0 |          1 |          1 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic.ini                                   | Ini              |         83 |          0 |         23 |        106 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic/env.py                                | Python           |         35 |         29 |         16 |         80 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic/versions/33318060f2fe_1st_revision.py | Python           |         45 |         12 |          7 |         64 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic/versions/3ac58b70cd7e_5th_revision.py | Python           |         22 |         12 |          7 |         41 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic/versions/477a22064d23_3d_revision.py  | Python           |         21 |         12 |          7 |         40 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic/versions/77185e0d8882_6th_revision.py | Python           |         10 |         12 |          7 |         29 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic/versions/7c19ef896ce4_7th_revision.py | Python           |         12 |         12 |          7 |         31 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic/versions/a3736372ee69_4th_revision.py | Python           |         23 |         12 |          7 |         42 |
+| /Users/karim/Desktop/fastapi-react/backend/alembic/versions/e04dbef7e76c_2nd_revision.py | Python           |         10 |         12 |          7 |         29 |
+| /Users/karim/Desktop/fastapi-react/backend/database.py                                   | Python           |          7 |          0 |          7 |         14 |
+| /Users/karim/Desktop/fastapi-react/backend/main.py                                       | Python           |        142 |          2 |         46 |        190 |
+| /Users/karim/Desktop/fastapi-react/backend/models.py                                     | Python           |         46 |          0 |         14 |         60 |
+| /Users/karim/Desktop/fastapi-react/backend/schemas.py                                    | Python           |         50 |          0 |         26 |         76 |
+| /Users/karim/Desktop/fastapi-react/backend/services.py                                   | Python           |        152 |          2 |         83 |        237 |
+| /Users/karim/Desktop/fastapi-react/frontend/README.md                                    | Markdown         |         38 |          0 |         33 |         71 |
+| /Users/karim/Desktop/fastapi-react/frontend/package-lock.json                            | JSON             |     28,754 |          0 |          1 |     28,755 |
+| /Users/karim/Desktop/fastapi-react/frontend/package.json                                 | JSON             |         41 |          0 |          1 |         42 |
+| /Users/karim/Desktop/fastapi-react/frontend/public/index.html                            | HTML             |         18 |         23 |          2 |         43 |
+| /Users/karim/Desktop/fastapi-react/frontend/public/manifest.json                         | JSON             |          8 |          0 |          2 |         10 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/App.jsx                                  | JavaScript React |         53 |         12 |         10 |         75 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/Comment.jsx                   | JavaScript React |         27 |          0 |          5 |         32 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/CommentForm.jsx               | JavaScript React |         22 |          0 |          2 |         24 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/Comments.jsx                  | JavaScript React |         75 |          0 |         16 |         91 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/ErrorMessage.jsx              | JavaScript React |          5 |          0 |          3 |          8 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/Header.jsx                    | JavaScript React |         16 |          0 |          5 |         21 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/LeadModal.jsx                 | JavaScript React |        159 |          0 |          7 |        166 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/Login.jsx                     | JavaScript React |         68 |          0 |          7 |         75 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/Register.jsx                  | JavaScript React |         84 |          0 |          8 |         92 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/Table.jsx                     | JavaScript React |        114 |          0 |         11 |        125 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/context/UserContext.jsx                  | JavaScript React |         28 |          0 |          5 |         33 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/index.css                                | CSS              |         78 |          0 |         19 |         97 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/index.js                                 | JavaScript       |         12 |          0 |          9 |         21 |
+| Total                                                                                    |                  |     30,258 |        152 |        411 |     30,821 |
++------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

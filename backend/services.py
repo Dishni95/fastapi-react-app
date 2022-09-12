@@ -128,3 +128,110 @@ async def update_lead(lead_id: int, lead: _schemas.LeadCreate, user: _schemas.Us
 
     return _schemas.Lead.from_orm(lead_db)
 
+
+# post functions
+
+async def create_post(user: _schemas.User, db: _orm.Session, post: _schemas.PostCreate):
+    post = _models.Post(**post.dict(), owner_id=user.id)
+    db.add(post)
+    db.commit()
+    db.refresh(post)
+    return _schemas.Post.from_orm(post)
+
+
+async def get_posts(user: _schemas.User, db: _orm.Session):
+    posts = db.query(_models.Post).filter_by(owner_id=user.id)
+
+    return list(map(_schemas.Post.from_orm, posts))
+
+
+async def _post_selector(post_id: int, user: _schemas.User, db: _orm.Session):
+    post = (
+        db.query(_models.Post)
+        .filter_by(owner_id=user.id)
+        .filter(_models.Post.id == post_id)
+        .first()
+    )
+
+    if post is None:
+        raise _fastapi.HTTPException(status_code=404, detail="Post does not exist")
+
+    return post
+
+
+async def get_post(post_id: int, user: _schemas.User, db: _orm.Session):
+    post = await _post_selector(post_id=post_id, user=user, db=db)
+
+    return _schemas.Post.from_orm(post)
+
+
+async def delete_post(post_id: int, user: _schemas.User, db: _orm.Session):
+    post = await _post_selector(post_id, user, db)
+
+    db.delete(post)
+    db.commit()
+
+async def update_post(post_id: int, post: _schemas.PostCreate, user: _schemas.User, db: _orm.Session):
+    post_db = await _post_selector(post_id, user, db)
+
+    post_db.post_name = post.post_name
+    post_db.post_body = post.post_body
+    
+
+    db.commit()
+    db.refresh(post_db)
+
+    return _schemas.Post.from_orm(post_db)
+
+#comment functions
+
+async def create_comment(user: _schemas.User, db: _orm.Session, comment: _schemas.CommentCreate):#, post_id: int):
+    comment = _models.Comment(**comment.dict(), owner_id=user.id)#, post_id=post_id)
+    db.add(comment)
+    db.commit()
+    db.refresh(comment)
+    return _schemas.Comment.from_orm(comment)
+
+
+async def get_comments(user: _schemas.User, db: _orm.Session):
+    comments = db.query(_models.Comment).filter_by(owner_id=user.id)
+
+    return list(map(_schemas.Comment.from_orm, comments))
+
+
+async def _comment_selector(comment_id: int, user: _schemas.User, db: _orm.Session):
+    comment = (
+        db.query(_models.Comment)
+        .filter_by(owner_id=user.id)
+        .filter(_models.Comment.id == comment_id)
+        .first()
+    )
+
+    if comment is None:
+        raise _fastapi.HTTPException(status_code=404, detail="Post does not exist")
+
+    return comment
+
+
+async def get_comment(comment_id: int, user: _schemas.User, db: _orm.Session):
+    comment = await _comment_selector(comment_id=comment_id, user=user, db=db)
+
+    return _schemas.Comment.from_orm(comment)
+
+
+async def delete_comment(comment_id: int, user: _schemas.User, db: _orm.Session):
+    comment = await _comment_selector(comment_id, user, db)
+
+    db.delete(comment)
+    db.commit()
+
+async def update_comment(comment_id: int, comment: _schemas.CommentCreate, user: _schemas.User, db: _orm.Session):
+    comment_db = await _comment_selector(comment_id, user, db)
+
+    comment_db.comment_text = comment.comment_text
+    
+
+    db.commit()
+    db.refresh(comment_db)
+
+    return _schemas.Comment.from_orm(comment_db)
