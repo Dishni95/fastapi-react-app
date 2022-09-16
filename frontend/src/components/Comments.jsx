@@ -6,8 +6,9 @@ import { useEffect } from "react";
 import ErrorMessage from "./ErrorMessage";
 import Comment from "./Comment";
 import CommentForm from "./CommentForm";
+import Posts from "./Posts";
 
-const Comments = ({owner_id}) => {
+const Comments = ({postId}) => {
 
     const [token] = useContext(UserContext);
     const [comments, setComments] = useState([]);
@@ -47,10 +48,7 @@ const Comments = ({owner_id}) => {
         getComments();
     }, []);
 
-    console.log("comments", comments);
-
-
-    const createComment  = async (commentText) => {
+    const createComment  = async (commentText, postId) => {
         
         const requestOptions = {
             method: "POST",
@@ -60,6 +58,7 @@ const Comments = ({owner_id}) => {
             },
             body: JSON.stringify({
                 comment_text: commentText,
+                post_id: postId,
             }),
             
         };
@@ -74,10 +73,11 @@ const Comments = ({owner_id}) => {
             <h3 className="comments-title">Comments</h3>
             <div className="comment-form-title">Write comment</div>
             <CommentForm submitLabel="Write" handleSubmit={createComment}/>
+
             <div className="comments-container">
-                {rootComments.map((rootComment) => (
+                {rootComments.filter(backendComment => backendComment.post_id === postId).map((rootComment) => (
                     <Comment 
-                    key={rootComment.id} 
+                    key={rootComment.id}
                     comment={rootComment} 
                     replies={getReplies(rootComment.id)}/>
                 ))} 

@@ -44,7 +44,7 @@ const App = () => {
       <Header title={message}/>
       <div className="columns">
         <div className="column"></div>
-      {/*}  <div className="column m-5 is-two-thirds">
+       {/* <div className="column m-5 is-two-thirds">
           {
             !token ? (
               <div className="columns">
@@ -54,9 +54,9 @@ const App = () => {
               <Table/>
             )
           }
-        </div> */}
-
-        <div className="column m-5 is-two-thirds">
+        </div>
+        */}
+        <div>
           {
             !token ? (
               <div className="columns">
@@ -67,7 +67,7 @@ const App = () => {
             )
           }
         </div>
-        <div className="column m-5 is-two-thirds">
+        {/*<div className="column m-5 is-two-thirds">
           {
             !token ? (
               <div className="columns">
@@ -77,7 +77,7 @@ const App = () => {
               <Comments/>
             )
           }
-        </div>
+        </div> */}
         <div className="column"></div>
       </div>
     </>

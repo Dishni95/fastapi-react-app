@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import Comments from "./Comments";
 
 const Posts = ({active, handleModal, token, id, setErrorMessage }) => {
     const [postName, setPostName] = useState("");
@@ -116,6 +117,7 @@ const Posts = ({active, handleModal, token, id, setErrorMessage }) => {
                     (<button className="button is-primary" onClick={handleCreatePost}>Create</button>)}
                     <button className="button" onClick={handleModal}>Cancel</button>
                 </footer>
+                
             </div>
         </div>
     );

@@ -1,0 +1,38 @@
+Date : 2022-09-16 02:15:18
+Directory : /Users/karim/Desktop/fastapi-react
+Total : 7 files,  265 codes, 31 comments, 35 blanks, all 331 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JavaScript React |          5 |        250 |         18 |         28 |        296 |
+| Python           |          2 |         15 |         13 |          7 |         35 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                     | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                        |          7 |        265 |         31 |         35 |        331 |
+| backend                                                                                  |          2 |         15 |         13 |          7 |         35 |
+| backend/alembic                                                                          |          1 |         16 |         12 |          7 |         35 |
+| backend/alembic/versions                                                                 |          1 |         16 |         12 |          7 |         35 |
+| frontend                                                                                 |          5 |        250 |         18 |         28 |        296 |
+| frontend/src                                                                             |          5 |        250 |         18 |         28 |        296 |
+| frontend/src/components                                                                  |          4 |        249 |          6 |         28 |        283 |
++------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                 | language         | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /Users/karim/Desktop/fastapi-react/backend/alembic/versions/af2b1acb0f76_8th_revision.py | Python           |         16 |         12 |          7 |         35 |
+| /Users/karim/Desktop/fastapi-react/backend/main.py                                       | Python           |         -1 |          1 |          0 |          0 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/App.jsx                                  | JavaScript React |          1 |         12 |          0 |         13 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/CommentForm.jsx               | JavaScript React |          1 |          0 |          0 |          1 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/Comments.jsx                  | JavaScript React |         -1 |          0 |         -1 |         -2 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/Posts.jsx                     | JavaScript React |        115 |          0 |         11 |        126 |
+| /Users/karim/Desktop/fastapi-react/frontend/src/components/PostsList.jsx                 | JavaScript React |        134 |          6 |         18 |        158 |
+| Total                                                                                    |                  |        265 |         31 |         35 |        331 |
++------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

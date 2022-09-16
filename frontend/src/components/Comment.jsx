@@ -2,11 +2,12 @@ import React from "react";
 import { UserContext } from "../context/UserContext";
 import { useContext } from "react";
 
-const Comment = ({comment, replies}) => {
+const Comment = ({comment, replies, postId}) => {
 
     const [token] = useContext(UserContext);
 
     return (
+        
         <div className="comment">
             <div className="comment-image-container">
                 <img src="/user-icon.png"/>

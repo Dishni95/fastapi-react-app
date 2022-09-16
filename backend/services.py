@@ -195,7 +195,7 @@ async def create_comment(user: _schemas.User, db: _orm.Session, comment: _schema
 
 async def get_comments(user: _schemas.User, db: _orm.Session):
     comments = db.query(_models.Comment).filter_by(owner_id=user.id)
-
+    
     return list(map(_schemas.Comment.from_orm, comments))
 
 
