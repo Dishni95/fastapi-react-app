@@ -48,7 +48,7 @@ const Comments = ({postId}) => {
         getComments();
     }, []);
 
-    const createComment  = async (commentText, postId) => {
+    const createComment  = async (commentText) => {
         
         const requestOptions = {
             method: "POST",
@@ -72,7 +72,7 @@ const Comments = ({postId}) => {
         <div className="comments">
             <h3 className="comments-title">Comments</h3>
             <div className="comment-form-title">Write comment</div>
-            <CommentForm submitLabel="Write" handleSubmit={createComment}/>
+            <CommentForm submitLabel="Write" handleSubmit={createComment} postId = {postId}/>
 
             <div className="comments-container">
                 {rootComments.filter(backendComment => backendComment.post_id === postId).map((rootComment) => (

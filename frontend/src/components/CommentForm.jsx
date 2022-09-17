@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-const CommentForm = ({handleSubmit, submitLabel} ) => {
+const CommentForm = ({handleSubmit, submitLabel, postId} ) => {
     const [text, setText] = useState("");
-    const [postId, setPostId] = useState(null)
     const isTextareaDisabled = text.length === 0;
     const onSubmit = event => {
         event.preventDefault();
