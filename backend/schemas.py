@@ -61,6 +61,8 @@ class Post(_PostBase):
 
 class _CommentBase(_pydantic.BaseModel):
     comment_text: str
+    post_id: int
+    
 
 class CommentCreate(_CommentBase):
     pass
@@ -68,7 +70,7 @@ class CommentCreate(_CommentBase):
 class Comment(_CommentBase):
     id: int
     owner_id: int
-    post_id: Union[int, None] = None
+    
     parent_id: Union[int, None] = None
     
 

@@ -185,8 +185,8 @@ async def update_post(post_id: int, post: _schemas.PostCreate, user: _schemas.Us
 
 #comment functions
 
-async def create_comment(user: _schemas.User, db: _orm.Session, comment: _schemas.CommentCreate, post_id: int):
-    comment = _models.Comment(**comment.dict(), owner_id=user.id, post_id=post_id)
+async def create_comment(user: _schemas.User, db: _orm.Session, comment: _schemas.CommentCreate): #, post_id: int):
+    comment = _models.Comment(**comment.dict(), owner_id=user.id)#, post_id=post_id)
     db.add(comment)
     db.commit()
     db.refresh(comment)

@@ -48,7 +48,7 @@ const Comments = ({postId}) => {
         getComments();
     }, []);
 
-    const createComment  = async (commentText) => {
+    const createComment  = async (text) => {
         
         const requestOptions = {
             method: "POST",
@@ -57,7 +57,7 @@ const Comments = ({postId}) => {
                 Authorization: "Bearer " + token,
             },
             body: JSON.stringify({
-                comment_text: commentText,
+                comment_text: text,
                 post_id: postId,
             }),
             
@@ -72,7 +72,7 @@ const Comments = ({postId}) => {
         <div className="comments">
             <h3 className="comments-title">Comments</h3>
             <div className="comment-form-title">Write comment</div>
-            <CommentForm submitLabel="Write" handleSubmit={createComment} postId = {postId}/>
+            <CommentForm submitLabel="Write" handleSubmit={createComment}/>
 
             <div className="comments-container">
                 {rootComments.filter(backendComment => backendComment.post_id === postId).map((rootComment) => (

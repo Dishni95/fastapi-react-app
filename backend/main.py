@@ -144,12 +144,12 @@ async def update_post(
 
 @app.post("/api/comments", response_model=_schemas.Comment)
 async def create_comment(
-    post_id: int,
+    #post_id: int,
     comment: _schemas.CommentCreate,
     user: _schemas.User = _fastapi.Depends(_services.get_current_user),
     db: _orm.Session = _fastapi.Depends(_services.get_db),
 ):
-    return await _services.create_comment(user=user, db=db, comment=comment, post_id=post_id)
+    return await _services.create_comment(user=user, db=db, comment=comment)#, post_id=post_id)
 
 
 @app.get("/api/comments", response_model=List[_schemas.Comment])
