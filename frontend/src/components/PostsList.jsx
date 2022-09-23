@@ -100,7 +100,9 @@ const handleDelete = async (id) => {
                 id={id}
                 setErrorMessage={setErrorMessage}
              />
-            <button className="button is-fullwidth mb-5 is-primary" onClick={ () => setActiveModal(true)}>Create Post</button>
+            <div class="has-text-centered">
+                <button className="button is-rounded mb-5 is-primary" onClick={ () => setActiveModal(true)}>Create Post</button>
+            </div>
             <ErrorMessage message = {errorMessage}/>
             {loaded && posts ? (
                     <div class="container">                                              

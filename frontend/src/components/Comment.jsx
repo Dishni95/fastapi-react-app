@@ -17,6 +17,11 @@ const Comment = ({comment, replies, postId}) => {
                     <div className="comment-author">{comment.owner_id}</div>
                 </div>
                 <div className="comment-text">{comment.comment_text}</div>
+                <div className="comment-actions">
+                    <div className="comment-action">Reply</div>
+                    <div className="comment-action">Edit</div>
+                    <div className="comment-action">Delete</div>
+                </div>
                 {replies.length > 0 && (
                     <div className="replies">
                         {replies.map(reply => (

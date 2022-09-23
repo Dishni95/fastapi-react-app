@@ -89,7 +89,7 @@ async def update_lead(
 
 @app.get("/api")
 async def root():
-    return {"message": "Awesome Leads Manager"}
+    return {"message": "My Blog"}
 
 # add Post path objects
 
