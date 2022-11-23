@@ -8,7 +8,7 @@ import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 
 import Login from "./components/Login";
-import Table from "./components/Table";
+
 import PostsList from "./components/PostsList";
 
 
